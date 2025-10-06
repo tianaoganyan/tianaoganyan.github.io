@@ -1,0 +1,291 @@
+/* discover_style.css */
+/* =========================================================
+   Base Styles
+   ========================================================= */
+:root {
+  --footer-h: 64px;
+  --gold: #4C3A10;
+  --text: #afafa6;
+}
+
+html {
+  font-family: "Scope One", serif;
+  color: var(--text);
+  background: #000;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding-bottom: var(--footer-h);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================================
+   Header
+   ========================================================= */
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+
+  padding: 12px 16px;
+  background: #000;
+  border-bottom: 2px solid var(--gold);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+  margin-right: auto;
+}
+
+.logo {
+  height: 56px;
+  width: auto;
+  display: block;
+}
+
+.menu a {
+  font-size: 22px;
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+/* =========================================================
+   Random Block
+   ========================================================= */
+.random-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  width: max-content;
+  margin: 20px 16px 0 auto;
+  padding: 0 16px;
+}
+
+.random-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.random-triangle {
+  height: 24px;
+  width: auto;
+}
+
+/* =========================================================
+   Amy Section
+   ========================================================= */
+.amy-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+  padding: 0 16px;
+}
+
+.amy-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.harmony-label {
+  font-size: 34px;
+  font-weight: bold;
+  color: var(--text);
+  margin: 0;
+  text-align: center;
+}
+
+.amy-card {
+  border: 4px solid var(--gold);
+  border-radius: 8px;
+  padding: 16px;
+
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  box-sizing: border-box;
+}
+
+.amy-image {
+  height: 360px;
+  width: auto;
+  border-radius: 6px;
+  display: block;
+  margin: 0 auto;
+}
+
+.song-info {
+  text-align: left;
+  width: 100%;
+  color: var(--text);
+
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.song-title {
+  font-size: 26px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.song-artist {
+  font-size: 18px;
+  border: 2px solid var(--gold);
+  padding: 2px 8px;
+  display: inline-block;
+  margin: 0;
+}
+
+.song-album,
+.song-genre {
+  font-size: 15px;
+  margin: 0;
+}
+
+.pause-img {
+  margin-top: 6px;
+  height: 52px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* =========================================================
+   Bottom Labels
+   ========================================================= */
+.up-next-bottom {
+  font-size: 20px;
+  font-weight: bolder;
+  color: var(--text);
+  margin: 28px 0 0;
+  text-align: center;
+}
+
+.journey-text {
+  font-size: 23px;
+  font-weight: bold;
+  color: var(--text);
+  background: var(--gold);
+  text-align: center;
+
+  padding: 10px 0;
+  margin: 24px auto 0;
+  border-radius: 6px;
+
+  width: 100%;
+  max-width: 900px;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   Skip / Save
+   ========================================================= */
+.side-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+
+  font-family: "Scope One", serif;
+  font-size: 32px;
+  font-weight: bolder;
+  color: var(--text);
+}
+
+.side-text .arrow {
+  height: 20px;
+  width: auto;
+}
+
+/* =========================================================
+   Footer
+   ========================================================= */
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+
+  background: #000;
+  padding: 12px 16px;
+  min-height: var(--footer-h);
+  border-top: 2px solid var(--gold);
+  box-sizing: border-box;
+}
+
+.footer span {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.facebook-logo,
+.tiktok-logo,
+.instagram-logo {
+  width: 18px;
+  height: 18px;
+}
+
+/* =========================================================
+   Media Queries
+   ========================================================= */
+@media (max-width: 480px) {
+  .menu a {
+    font-size: 18px;
+  }
+
+  .logo {
+    height: 48px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .logo {
+    height: 72px;
+  }
+
+  .amy-section {
+    gap: 40px;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1025px) {
+  .logo {
+    height: 90px;
+  }
+
+  .amy-section {
+    gap: 60px;
+    justify-content: center;
+  }
+}
