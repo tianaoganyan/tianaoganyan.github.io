@@ -1,0 +1,24 @@
+/* Logos-only override: safe, no layout changes */
+.facebook-logo{
+  width: 40px !important;   /* tweak this number if you want */
+  height: 40px !important;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
+.tiktok-logo{
+  width: 50px !important;   /* tweak this number if you want */
+  height: 50px !important;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
+.instagram-logo {
+  width: 35px !important;   /* tweak this number if you want */
+  height: 35px !important;
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* Optional: tiny space after CONTACT. before the icons */
+/* .contact + .facebook-logo { margin-left: 8px; } */
