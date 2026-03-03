@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiana Oganyan | Contact</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">TIANA OGANYAN</a>
+
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Welcome</a>
+      <a class="nav-link" href="portfolio.html">Portfolio</a>
+      <a class="nav-link" href="resume.html">Resumé</a>
+      <a class="nav-link is-muted" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page contact-page">
+
+  <section class="contact-hero">
+    <div class="contact-hero-panel">
+      <h1 class="contact-title">CONTACT</h1>
+      <p class="contact-subtitle">
+        I’m always open to creative collaborations, production work, and technical projects.
+        If you have an idea, a role, or a challenge you want to build, I’d love to hear about it.
+      </p>
+      <p class="contact-subtitle">
+        Reach out through email, phone, or LinkedIn, or use the message form below.
+      </p>
+    </div>
+  </section>
+
+  <section class="contact-grid">
+
+    <!-- LEFT: CONTACT CARDS -->
+    <div class="contact-cards">
+
+      <a class="contact-card" href="mailto:tianaoganyan@gmail.com">
+        <div class="contact-card-icon" aria-hidden="true">✉</div>
+        <div class="contact-card-body">
+          <p class="contact-card-label">Email</p>
+          <p class="contact-card-value">tianaoganyan@gmail.com</p>
+        </div>
+        <div class="contact-card-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a class="contact-card" href="tel:+18184218646">
+        <div class="contact-card-icon" aria-hidden="true">☎</div>
+        <div class="contact-card-body">
+          <p class="contact-card-label">Phone</p>
+          <p class="contact-card-value">+1 (818) 421-8646</p>
+        </div>
+        <div class="contact-card-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a class="contact-card"
+         href="https://www.google.com/maps/search/?api=1&query=974+East+Glenoaks+Boulevard+Glendale+CA+91207"
+         target="_blank" rel="noopener">
+        <div class="contact-card-icon" aria-hidden="true">⌂</div>
+        <div class="contact-card-body">
+          <p class="contact-card-label">Location</p>
+          <p class="contact-card-value">Glendale, CA</p>
+          <p class="contact-card-mini">974 East Glenoaks Boulevard • 91207</p>
+        </div>
+        <div class="contact-card-arrow" aria-hidden="true">↗</div>
+      </a>
+
+      <a class="contact-card"
+         href="https://www.linkedin.com/in/tiana-oganyan-9a6b7220"
+         target="_blank" rel="noopener">
+        <div class="contact-card-icon" aria-hidden="true">in</div>
+        <div class="contact-card-body">
+          <p class="contact-card-label">LinkedIn</p>
+          <p class="contact-card-value">tiana-oganyan-9a6b7220</p>
+        </div>
+        <div class="contact-card-arrow" aria-hidden="true">↗</div>
+      </a>
+
+    </div>
+
+    <!-- RIGHT: FORM (VISUAL ONLY) -->
+    <div class="contact-form-wrap">
+      <div class="contact-form-card">
+        <h2 class="contact-form-title">Send a message</h2>
+        <p class="contact-form-note">
+          This form is currently a visual demo. For now, please use email or LinkedIn to reach me.
+        </p>
+
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('This form is a visual demo right now. Please email me at tianaoganyan@gmail.com.');">
+          <label class="field">
+            <span class="field-label">Name</span>
+            <input class="field-input" type="text" name="name" placeholder="Your name" autocomplete="name" />
+          </label>
+
+          <label class="field">
+            <span class="field-label">Email</span>
+            <input class="field-input" type="email" name="email" placeholder="you@example.com" autocomplete="email" />
+          </label>
+
+          <label class="field">
+            <span class="field-label">Message</span>
+            <textarea class="field-input field-textarea" name="message" placeholder="Tell me what you’re building..." rows="6"></textarea>
+          </label>
+
+          <button class="contact-btn" type="submit">Send Message</button>
+
+          <p class="contact-form-mini">
+            Prefer email? <a class="contact-inline-link" href="mailto:tianaoganyan@gmail.com">tianaoganyan@gmail.com</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+</body>
+</html>
