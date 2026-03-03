@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Film | Tiana Oganyan</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">TIANA OGANYAN</a>
+
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Welcome</a>
+      <a class="nav-link is-muted" href="portfolio.html">Portfolio</a>
+      <a class="nav-link" href="resume.html">Resumé</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="project-wrap">
+
+    <!-- HERO (COVER IMAGE) -->
+    <section class="project-hero">
+      <div class="project-hero-media" style="background-image:url('images/movie1.jpg');"></div>
+      <div class="project-hero-inner">
+        <div>
+          <h1 class="project-title">FILM</h1>
+          <p class="project-tagline">
+            Director’s Assistant • On-set coordination, schedules, and production support.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <section class="project-info">
+      <div class="info-card">
+        <p class="info-label">ROLE</p>
+        <p class="info-value">Director’s Assistant</p>
+      </div>
+
+      <div class="info-card">
+        <p class="info-label">FOCUS</p>
+        <p class="info-value">Coordination • Logistics • Communication</p>
+      </div>
+
+      <div class="info-card">
+        <p class="info-label">DELIVERABLE</p>
+        <p class="info-value">Pre-production support and on-set production coordination</p>
+      </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="project-section">
+      <h2 class="section-title">OVERVIEW</h2>
+      <p class="section-copy">
+        While studying abroad in Armenia, I had the opportunity to work on a Christmas movie as the Director’s Assistant.
+        I supported day-to-day on-set operations, helped coordinate schedules and communication between departments,
+        and assisted in keeping production moving smoothly so the creative team could stay focused on performance and capture.
+      </p>
+    </section>
+
+    <!-- TRAILER (LOCAL MP4 + YOUTUBE) -->
+    <section class="project-section">
+      <h2 class="section-title">TRAILER</h2>
+
+      <div class="video-embed">
+        <video controls playsinline preload="metadata" poster="images/movie1.jpg">
+          <source src="images/movie_trailer.MP4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <p class="section-copy" style="margin-top:14px;">
+        If the MP4 doesn’t load on your setup, the YouTube embed below will always work.
+      </p>
+
+      <div class="video-embed" style="margin-top:14px;">
+        <iframe
+          src="https://www.youtube.com/embed/ExD8OkHWBIg"
+          title="Film Trailer"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- AUDIO -->
+    <section class="project-section">
+      <h2 class="section-title">LISTEN WHILE YOU VIEW</h2>
+
+      <div class="render-audio">
+        <p class="render-audio-title">Film soundtrack</p>
+
+        <audio controls preload="metadata" class="audio-player">
+          <source src="audio/garik_sona.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <p class="render-audio-note">
+          Garik &amp; Sona • En Um Amanorn E
+        </p>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="project-section">
+      <h2 class="section-title">MOVIE POSTERS</h2>
+
+      <div class="gallery">
+        <div class="gallery-item" data-lightbox="images/movie1.jpg">
+          <img src="images/movie1.jpg" alt="Film still 1">
+        </div>
+        <div class="gallery-item" data-lightbox="images/movie2.jpg">
+          <img src="images/movie2.jpg" alt="Film still 2">
+        </div>
+        <div class="gallery-item" data-lightbox="images/movie3.jpg">
+          <img src="images/movie3.jpg" alt="Film still 3">
+        </div>
+        <div class="gallery-item" data-lightbox="images/movie4.jpg">
+          <img src="images/movie4.jpg" alt="Film still 4">
+        </div>
+      </div>
+
+      <!-- BACK LINK (BOTTOM, INSIDE LAST BOX LIKE OTHER SUBPAGES) -->
+      <a class="back-link" href="portfolio.html">← Back to Portfolio</a>
+    </section>
+
+  </div>
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-backdrop"></div>
+  <img class="lightbox-image" id="lightbox-image" alt="">
+</div>
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightbox-image");
+
+  document.querySelectorAll("[data-lightbox]").forEach(item => {
+    item.addEventListener("click", () => {
+      lightboxImage.src = item.dataset.lightbox;
+      lightbox.classList.add("is-active");
+    });
+  });
+
+  lightbox.addEventListener("click", () => {
+    lightbox.classList.remove("is-active");
+  });
+</script>
+
+</body>
+</html>
