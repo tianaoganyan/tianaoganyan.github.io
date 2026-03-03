@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Culture Pattern | Tiana Oganyan</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">TIANA OGANYAN</a>
+
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Welcome</a>
+      <a class="nav-link is-muted" href="portfolio.html">Portfolio</a>
+      <a class="nav-link" href="resume.html">Resumé</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="project-wrap">
+
+    <!-- HERO -->
+    <section class="project-hero">
+      <div class="project-hero-media" style="background-image:url('images/culture_pattern.png');"></div>
+      <div class="project-hero-inner">
+        <div>
+          <h1 class="project-title">CULTURE PATTERN</h1>
+          <p class="project-tagline">
+            A pattern system inspired by my Armenian identity and Christianity, translating heritage
+            into a modern visual language.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <section class="project-info">
+      <div class="info-card">
+        <p class="info-label">COURSE</p>
+        <p class="info-value">Design & Composition</p>
+      </div>
+
+      <div class="info-card">
+        <p class="info-label">CULTURE</p>
+        <p class="info-value">Armenian • Subculture: Christianity</p>
+      </div>
+
+      <div class="info-card">
+        <p class="info-label">FOCUS</p>
+        <p class="info-value">Motifs • Repetition • Visual rhythm</p>
+      </div>
+    </section>
+
+    <!-- CONCEPT -->
+    <section class="project-section">
+      <h2 class="section-title">CONCEPT</h2>
+      <p class="section-copy">
+        This project explores cultural identity through pattern-making. I chose my Armenian background as the
+        culture and Christianity as my subculture, then built a repeating design system that balances structure
+        and ornament. The final pattern is meant to feel traditional in its inspiration, but clean and modern
+        in its composition.
+      </p>
+    </section>
+
+    <!-- FINAL + AUDIO (same layout as Khachaturian) -->
+    <section class="project-section">
+      <h2 class="section-title">FINAL</h2>
+
+      <div class="render-row">
+
+        <!-- IMAGE -->
+        <div class="gallery-item render-img" data-lightbox="images/culture_pattern.png">
+          <img src="images/culture_pattern.png" alt="Culture pattern final design">
+        </div>
+
+        <!-- AUDIO -->
+        <div class="render-audio">
+          <p class="render-audio-title">Listen while you view</p>
+
+          <audio controls preload="metadata" class="audio-player">
+            <source src="audio/komitas.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+
+          <p class="render-audio-note">
+            Komitas • Shushiki (Reimagined by Gorgouz Beats)
+          </p>
+        </div>
+
+      </div>
+
+      <a class="back-link" href="portfolio.html">← Back to Portfolio</a>
+    </section>
+
+  </div>
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-backdrop"></div>
+  <img class="lightbox-image" id="lightbox-image" alt="">
+</div>
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightbox-image");
+
+  document.querySelectorAll("[data-lightbox]").forEach(item => {
+    item.addEventListener("click", () => {
+      lightboxImage.src = item.dataset.lightbox;
+      lightbox.classList.add("is-active");
+    });
+  });
+
+  lightbox.addEventListener("click", () => {
+    lightbox.classList.remove("is-active");
+    lightboxImage.src = "";
+  });
+</script>
+
+</body>
+</html>
