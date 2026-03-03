@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiana Oganyan | Contact</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">TIANA OGANYAN</a>
+
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Welcome</a>
+      <a class="nav-link" href="portfolio.html">Portfolio</a>
+      <a class="nav-link" href="resume.html">Resumé</a>
+      <a class="nav-link is-muted" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page contact-page">
+
+  <section class="contact-hero">
+    <div class="contact-hero-panel">
+      <h1 class="contact-title">Contact</h1>
+      <p class="contact-subtitle">
+        Send a message and I’ll get back to you as soon as I can.
+      </p>
+    </div>
+  </section>
+
+  <section class="contact-grid">
+
+    <div class="contact-cards">
+      <!-- Optional info cards (edit as you like) -->
+      <a class="contact-card" href="mailto:tianaoganyan@gmail.com">
+        <div class="contact-card-icon">✉️</div>
+        <div class="contact-card-body">
+          <p class="contact-card-label">Email</p>
+          <p class="contact-card-value">tianaoganyan@gmail.com</p>
+          <p class="contact-card-mini">Click to email</p>
+        </div>
+        <div class="contact-card-arrow">›</div>
+      </a>
+
+      <a class="contact-card" href="tel:+18184218646">
+        <div class="contact-card-icon">📞</div>
+        <div class="contact-card-body">
+          <p class="contact-card-label">Phone</p>
+          <p class="contact-card-value">+1 (818) 421-8646</p>
+          <p class="contact-card-mini">Click to call</p>
+        </div>
+        <div class="contact-card-arrow">›</div>
+      </a>
+
+      <div class="contact-card" style="cursor: default;">
+        <div class="contact-card-icon">📍</div>
+        <div class="contact-card-body">
+          <p class="contact-card-label">Location</p>
+          <p class="contact-card-value">Los Angeles, CA</p>
+          <p class="contact-card-mini">Available for opportunities</p>
+        </div>
+        <div class="contact-card-arrow"></div>
+      </div>
+    </div>
+
+    <div class="contact-form-card">
+      <h2 class="contact-form-title">Message</h2>
+      <p class="contact-form-note">
+        Use the form below to reach out directly.
+      </p>
+
+      <!-- Working Formspree form -->
+      <form class="contact-form" id="contactForm"
+            action="https://formspree.io/f/xdalqaew"
+            method="POST">
+
+        <div class="field">
+          <label class="field-label" for="name">Name</label>
+          <input class="field-input" id="name" name="name" type="text" placeholder="Your name" required>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="email">Email</label>
+          <input class="field-input" id="email" name="email" type="email" placeholder="you@email.com" required>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="message">Message</label>
+          <textarea class="field-input field-textarea" id="message" name="message"
+                    placeholder="Write your message..." required></textarea>
+        </div>
+
+        <!-- Optional: helps reduce spam + useful in your inbox -->
+        <input type="hidden" name="_subject" value="New message from Tiana Oganyan portfolio site">
+
+        <button class="contact-btn" id="sendBtn" type="submit">Send</button>
+
+        <p class="contact-form-mini" id="formStatus" aria-live="polite" style="margin-top:10px;"></p>
+      </form>
+
+    </div>
+
+  </section>
+
+</main>
+
+<script>
+  // AJAX submit so it shows a message instead of leaving the page
+  const form = document.getElementById('contactForm');
+  const statusEl = document.getElementById('formStatus');
+  const sendBtn = document.getElementById('sendBtn');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    statusEl.textContent = '';
+    sendBtn.disabled = true;
+    sendBtn.textContent = 'Sending…';
+
+    try {
+      const formData = new FormData(form);
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        form.reset();
+        statusEl.textContent = 'Message sent — thank you!';
+      } else {
+        statusEl.textContent = 'Something went wrong. Please try again or email me directly.';
+      }
+    } catch (err) {
+      statusEl.textContent = 'Network error. Please try again or email me directly.';
+    } finally {
+      sendBtn.disabled = false;
+      sendBtn.textContent = 'Send';
+    }
+  });
+</script>
+
+</body>
+</html>

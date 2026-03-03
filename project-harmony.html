@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Harmony | Tiana Oganyan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">TIANA OGANYAN</a>
+
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Welcome</a>
+      <a class="nav-link is-muted" href="portfolio.html">Portfolio</a>
+      <a class="nav-link" href="resume.html">Resumé</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="project-wrap">
+
+    <!-- HERO -->
+    <section class="project-hero">
+      <div class="project-hero-media" style="background-image:url('images/harmony_home.png');"></div>
+      <div class="project-hero-inner">
+        <div>
+          <h1 class="project-title">HARMONY</h1>
+          <p class="project-tagline">
+            A prototype concept for a music-based social platform where AI recommends songs based on listening
+            behavior, then connects users through shared taste.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <section class="project-info">
+      <div class="info-card">
+        <p class="info-label">TYPE</p>
+        <p class="info-value">UI/UX Prototype • Concept</p>
+      </div>
+
+      <div class="info-card">
+        <p class="info-label">FEATURES</p>
+        <p class="info-value">AI recommendations • Social matching • Playlist generator</p>
+      </div>
+
+      <div class="info-card">
+        <p class="info-label">PAGES</p>
+        <p class="info-value">Home • Discover • Sync • Vibe</p>
+      </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="project-section">
+      <h2 class="section-title">OVERVIEW</h2>
+      <p class="section-copy">
+        Harmony is a prototype idea for a social media platform centered on music discovery. Users receive
+        recommendations driven by AI and listening behavior, then connect with others who share similar taste.
+        The experience includes discovery, following and engagement, and a playlist generator that can be
+        random or genre-based.
+      </p>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="project-section">
+      <h2 class="section-title">SCREENS</h2>
+
+      <div class="gallery">
+        <div class="gallery-item" data-lightbox="images/harmony_home.png">
+          <img src="images/harmony_home.png" alt="Harmony — Home screen">
+        </div>
+
+        <div class="gallery-item" data-lightbox="images/harmony_discover.png">
+          <img src="images/harmony_discover.png" alt="Harmony — Discover screen">
+        </div>
+
+        <div class="gallery-item" data-lightbox="images/harmony_sync.png">
+          <img src="images/harmony_sync.png" alt="Harmony — Sync screen">
+        </div>
+
+        <div class="gallery-item" data-lightbox="images/harmony_vibe.png">
+          <img src="images/harmony_vibe.png" alt="Harmony — Vibe screen">
+        </div>
+      </div>
+
+      <a class="back-link" href="portfolio.html">← Back to Portfolio</a>
+    </section>
+
+  </div>
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-backdrop"></div>
+  <img class="lightbox-image" id="lightbox-image" alt="">
+</div>
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightbox-image");
+
+  document.querySelectorAll("[data-lightbox]").forEach(item => {
+    item.addEventListener("click", () => {
+      lightboxImage.src = item.dataset.lightbox;
+      lightbox.classList.add("is-active");
+    });
+  });
+
+  lightbox.addEventListener("click", () => {
+    lightbox.classList.remove("is-active");
+    lightboxImage.src = "";
+  });
+</script>
+
+</body>
+</html>
