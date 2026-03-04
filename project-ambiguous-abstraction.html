@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ambiguous Abstraction | Tiana Oganyan</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">TIANA OGANYAN</a>
+
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Welcome</a>
+      <a class="nav-link is-muted" href="portfolio.html">Portfolio</a>
+      <a class="nav-link" href="resume.html">Resumé</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="project-wrap">
+
+    <!-- HERO -->
+    <section class="project-hero">
+      <div class="project-hero-media" style="background-image:url('images/triangle_symmetrical.png');"></div>
+      <div class="project-hero-inner">
+        <div>
+          <h1 class="project-title">AMBIGUOUS ABSTRACTION</h1>
+          <p class="project-tagline">
+            A design and composition study exploring abstraction, balance, and visual tension,
+            where forms shift depending on how the viewer reads them.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <section class="project-info">
+      <div class="info-card">
+        <p class="info-label">COURSE</p>
+        <p class="info-value">Design & Composition</p>
+      </div>
+
+      <div class="info-card">
+        <p class="info-label">FOCUS</p>
+        <p class="info-value">Ambiguity • Symmetry • Visual rhythm</p>
+      </div>
+
+      <div class="info-card">
+        <p class="info-label">MEDIUM</p>
+        <p class="info-value">Digital composition</p>
+      </div>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="project-section">
+      <h2 class="section-title">CONCEPT</h2>
+      <p class="section-copy">
+        This project explores how abstraction can feel both structured and uncertain at the same time.
+        By using symmetry and repeated geometry, the compositions create a sense of stability, but the
+        shapes remain visually ambiguous, allowing the viewer to interpret form, depth, and movement
+        in more than one way.
+      </p>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="project-section">
+      <h2 class="section-title">WORKS</h2>
+
+      <div class="gallery">
+        <div class="gallery-item" data-lightbox="images/triangle_symmetrical.png">
+          <img src="images/triangle_symmetrical.png" alt="Ambiguous Abstraction — triangle composition">
+        </div>
+
+        <div class="gallery-item" data-lightbox="images/circular_symmetrical.png">
+          <img src="images/circular_symmetrical.png" alt="Ambiguous Abstraction — circular composition">
+        </div>
+      </div>
+
+      <a class="back-link" href="portfolio.html">← Back to Portfolio</a>
+    </section>
+
+  </div>
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-backdrop"></div>
+  <img class="lightbox-image" id="lightbox-image" alt="">
+</div>
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightbox-image");
+
+  document.querySelectorAll("[data-lightbox]").forEach(item => {
+    item.addEventListener("click", () => {
+      lightboxImage.src = item.dataset.lightbox;
+      lightbox.classList.add("is-active");
+    });
+  });
+
+  lightbox.addEventListener("click", () => {
+    lightbox.classList.remove("is-active");
+    lightboxImage.src = "";
+  });
+</script>
+
+</body>
+</html>
