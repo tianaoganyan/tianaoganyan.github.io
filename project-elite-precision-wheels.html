@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite Precision Wheels | Tiana Oganyan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">TIANA OGANYAN</a>
+
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Welcome</a>
+      <a class="nav-link is-muted" href="portfolio.html">Portfolio</a>
+      <a class="nav-link" href="resume.html">Resumé</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="project-wrap">
+
+    <!-- HERO -->
+    <section class="project-hero project-hero--site">
+      <div class="project-hero-media" style="background-image:url('images/web/epw_screenshot_hero.jpg');"></div>
+      <div class="project-hero-inner">
+        <div>
+          <h1 class="project-title">ELITE PRECISION WHEELS</h1>
+          <p class="project-tagline">A website for a luxury steering wheel shop in Glendale that builds custom wheels for BMW, Porsche, Mercedes-AMG, and exotic cars.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <section class="project-info">
+      <div class="info-card">
+        <p class="info-label">TYPE</p>
+        <p class="info-value">Business Website • Design &amp; Development</p>
+      </div>
+
+      <div class="info-card">
+        <p class="info-label">FEATURES</p>
+        <p class="info-value">Build request form • Vehicle gallery • Build process • Nationwide shipping</p>
+      </div>
+
+      <div class="info-card">
+        <p class="info-label">LIVE SITE</p>
+        <p class="info-value"><a href="https://eliteprecisionwheels.com" target="_blank" rel="noopener">eliteprecisionwheels.com</a></p>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="project-section">
+      <h2 class="section-title">OVERVIEW</h2>
+      <p class="section-copy">Elite Precision Wheels reupholsters and customizes steering wheels with Nappa leather, Alcantara, and custom stitching. I designed and built the site to feel as premium as the work itself, with a dark interior inspired palette, warm copper accents, and large vehicle photography. The site walks customers through materials, services, and the six step build process, then leads into a detailed quote form where they can spec their own wheel. It also explains drop off options for local customers and shipping for customers nationwide.</p>
+    </section>
+
+    <!-- HOMEPAGE -->
+    <section class="project-section">
+      <h2 class="section-title">HOMEPAGE</h2>
+      <div class="site-frame">
+        <div class="webdev-bar"><i></i><i></i><i></i><span>eliteprecisionwheels.com</span></div>
+        <div class="site-frame-scroll">
+          <img src="images/web/epw_screenshot_full.jpg" alt="Elite Precision Wheels full homepage">
+        </div>
+      </div>
+      <p class="site-frame-hint">Scroll inside the window to see the full page.</p>
+      <div class="site-actions" style="margin-top:16px;">
+        <a class="spotlight-btn" href="https://eliteprecisionwheels.com" target="_blank" rel="noopener">Visit Live Site</a>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="project-section">
+      <h2 class="section-title">IMAGERY</h2>
+      <div class="gallery gallery--uniform">
+        <div class="gallery-item" data-lightbox="images/web/epw_bmw.jpg">
+          <img src="images/web/epw_bmw.jpg" alt="BMW interior">
+        </div>
+
+        <div class="gallery-item" data-lightbox="images/web/epw_porsche3.jpg">
+          <img src="images/web/epw_porsche3.jpg" alt="Porsche interior">
+        </div>
+
+        <div class="gallery-item" data-lightbox="images/web/epw_amg.jpg">
+          <img src="images/web/epw_amg.jpg" alt="Mercedes-AMG interior">
+        </div>
+
+        <div class="gallery-item" data-lightbox="images/web/epw_porsche1.jpg">
+          <img src="images/web/epw_porsche1.jpg" alt="Custom race interior">
+        </div>
+
+        <div class="gallery-item" data-lightbox="images/web/epw_engine.jpg">
+          <img src="images/web/epw_engine.jpg" alt="Custom steering wheel detail">
+        </div>
+
+        <div class="gallery-item" data-lightbox="images/web/epw_detail1.jpg">
+          <img src="images/web/epw_detail1.jpg" alt="Stitching detail">
+        </div>
+      </div>
+    </section>
+
+    <a class="back-link" href="project-web-development.html">← Back to Web Development</a>
+
+  </div>
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-backdrop"></div>
+  <img class="lightbox-image" id="lightbox-image" alt="">
+</div>
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightbox-image");
+
+  document.querySelectorAll("[data-lightbox]").forEach(item => {
+    item.addEventListener("click", () => {
+      lightboxImage.src = item.dataset.lightbox;
+      lightbox.classList.add("is-active");
+    });
+  });
+
+  lightbox.addEventListener("click", () => {
+    lightbox.classList.remove("is-active");
+    lightboxImage.src = "";
+  });
+</script>
+
+</body>
+</html>

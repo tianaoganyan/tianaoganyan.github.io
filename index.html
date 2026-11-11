@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en">  
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -62,29 +62,43 @@
       </div>
 
       <!-- radio tabs -->
-      <input class="spotlight-radio" type="radio" name="spotlight" id="sp-film" checked>
-      <input class="spotlight-radio" type="radio" name="spotlight" id="sp-harmony">
-      <input class="spotlight-radio" type="radio" name="spotlight" id="sp-waltz">
+      <input class="spotlight-radio" type="radio" name="spotlight" id="sp-web" checked>
+      <input class="spotlight-radio" type="radio" name="spotlight" id="sp-film">
+      <input class="spotlight-radio" type="radio" name="spotlight" id="sp-app">
 
       <div class="spotlight-tabs">
+        <label class="spotlight-tab" for="sp-web">Web Development</label>
         <label class="spotlight-tab" for="sp-film">Mallորվածը</label>
-        <label class="spotlight-tab" for="sp-harmony">Harmony</label>
-        <label class="spotlight-tab" for="sp-waltz">Masquerade Waltz</label>
+        <label class="spotlight-tab" for="sp-app">App Development</label>
       </div>
 
       <div class="spotlight-body">
 
         <!-- left: image -->
         <div class="spotlight-media">
-          <div class="spotlight-img img-film"></div>
-          <div class="spotlight-img img-harmony"></div>
-          <div class="spotlight-img img-waltz"></div>
+          <div class="spotlight-img img-web"><img src="images/web/ppc_screenshot_hero.jpg" alt="Pacific Paper Cups website"></div>
+          <div class="spotlight-img img-film"><img src="images/movie1.jpg" alt="Lost in the Mall movie poster"></div>
+          <div class="spotlight-img img-app"><img src="images/portals-cover.png" alt="Portals NFC installation app"></div>
 
           <div class="spotlight-glow" aria-hidden="true"></div>
         </div>
 
         <!-- right: copy + actions -->
         <div class="spotlight-panel">
+
+          <div class="spotlight-copy copy-web">
+            <p class="spotlight-kicker">Web Design &amp; Development</p>
+            <h3 class="spotlight-name">Web Development</h3>
+            <p class="spotlight-text">
+              Live websites I've designed and coded for real businesses, from a custom logo customizer
+              and Stripe checkout for Pacific Paper Cups to sites for Elite Precision Wheels and my own
+              tutoring academy.
+            </p>
+            <div class="spotlight-actions">
+              <a class="spotlight-btn" href="project-web-development.html">View Websites</a>
+              <a class="spotlight-btn ghost" href="portfolio.html">View Portfolio</a>
+            </div>
+          </div>
 
           <div class="spotlight-copy copy-film">
             <p class="spotlight-kicker">Director’s Assistant</p>
@@ -99,28 +113,17 @@
             </div>
           </div>
 
-          <div class="spotlight-copy copy-harmony">
-            <h3 class="spotlight-name">Web Design &amp; Development</h3>
+          <div class="spotlight-copy copy-app">
+            <p class="spotlight-kicker">Interactive Installation • NFC</p>
+            <h3 class="spotlight-name">App Development</h3>
             <p class="spotlight-text">
-              Designed and developed a complete website called Harmony using HTML and CSS,
-              with emphasis on layout, visual hierarchy, and responsive front-end structure.
+              Portals is an NFC based installation app. Participants tap a tagged object at each station,
+              and the app tracks time, presence, and movement in real time, turning physical interaction
+              into live data without phones or internet.
             </p>
             <div class="spotlight-actions">
-              <a class="spotlight-btn" href="project-harmony.html">View Website</a>
+              <a class="spotlight-btn" href="project-portals.html">Open Project</a>
               <a class="spotlight-btn ghost" href="portfolio.html">View Portfolio</a>
-            </div>
-          </div>
-
-          <div class="spotlight-copy copy-waltz">
-            <p class="spotlight-kicker">Graphic Design Final</p>
-            <h3 class="spotlight-name">Masquerade Waltz</h3>
-            <p class="spotlight-text">
-              A final that blends elements and principles of design with AI, vector drawing, and my own handwriting.
-              The Armenian lettering is the composer’s name, written by hand, capturing the emotion behind the piece.
-            </p>
-            <div class="spotlight-actions">
-              <a class="spotlight-btn" href="project-khachaturian.html">Open Project</a>
-              <a class="spotlight-btn ghost" href="resume.html">Resumé</a>
             </div>
           </div>
 

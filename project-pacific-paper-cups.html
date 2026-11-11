@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pacific Paper Cups | Tiana Oganyan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="index.html">TIANA OGANYAN</a>
+
+    <nav class="nav">
+      <a class="nav-link" href="index.html">Welcome</a>
+      <a class="nav-link is-muted" href="portfolio.html">Portfolio</a>
+      <a class="nav-link" href="resume.html">Resumé</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+  <div class="project-wrap">
+
+    <!-- HERO -->
+    <section class="project-hero project-hero--site">
+      <div class="project-hero-media" style="background-image:url('images/web/ppc_screenshot_hero.jpg');"></div>
+      <div class="project-hero-inner">
+        <div>
+          <h1 class="project-title">PACIFIC PAPER CUPS</h1>
+          <p class="project-tagline">A website for a Los Angeles packaging manufacturer that makes custom printed paper cups, kraft takeout boxes, and paper bags.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <section class="project-info project-info--four">
+      <div class="info-card">
+        <p class="info-label">TYPE</p>
+        <p class="info-value">Business Website • E-commerce</p>
+      </div>
+
+      <div class="info-card">
+        <p class="info-label">FEATURES</p>
+        <p class="info-value">Live logo customizer • Online ordering • Stripe checkout</p>
+      </div>
+
+      <div class="info-card">
+        <p class="info-label">BUILT WITH</p>
+        <p class="info-value">HTML • CSS • JavaScript • Canvas • Netlify Functions • Stripe</p>
+      </div>
+      <div class="info-card">
+        <p class="info-label">LIVE SITE</p>
+        <p class="info-value"><a href="https://pacificpapercups.com" target="_blank" rel="noopener">pacificpapercups.com</a></p>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="project-section">
+      <h2 class="section-title">OVERVIEW</h2>
+      <p class="section-copy">Pacific Paper Cups supplies distributors, retailers, bakeries, and restaurant groups, including partners like Sysco, Core-Mark, and Amazon. I rebuilt the site from scratch so it would look professional enough to pitch to large corporate clients. The design uses a clean navy and kraft palette, bold product photography, and clear spec cards for each product line. Each product has its own page with sizes and case packs, and the site includes a quote request flow and a shopping cart for direct orders.</p>
+    </section>
+
+
+    <!-- CUSTOMIZATION -->
+    <section class="project-section">
+      <h2 class="section-title">LIVE LOGO CUSTOMIZER</h2>
+      <p class="section-copy">
+        I coded a live preview tool so customers can see their brand on the product before they order.
+        They upload a logo (PNG, JPG, or SVG), add optional text with a choice of fonts, sizes, and colors,
+        and then drag each layer into place. The logo and text wrap around the real product photo using
+        HTML canvas, so it actually looks printed on the cup, box, or bag. Customers can pick a size,
+        download their mockup, or add the design straight to their cart. Everything runs in the browser,
+        and the logo is only sent to the company once the customer checks out.
+      </p>
+
+      <div class="gallery gallery--uniform" style="margin-top:20px;">
+        <div class="gallery-item" data-lightbox="images/web/ppc_yourlogo_cup.jpg">
+          <img src="images/web/ppc_yourlogo_cup.jpg" alt="Custom logo preview on a paper cup">
+        </div>
+        <div class="gallery-item" data-lightbox="images/web/ppc_yourlogo_box.jpg">
+          <img src="images/web/ppc_yourlogo_box.jpg" alt="Custom logo preview on a kraft to go box">
+        </div>
+        <div class="gallery-item" data-lightbox="images/web/ppc_yourlogo_bag.jpg">
+          <img src="images/web/ppc_yourlogo_bag.jpg" alt="Custom logo preview on a kraft paper bag">
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- ORDERING -->
+    <section class="project-section">
+      <h2 class="section-title">ORDERING &amp; CHECKOUT</h2>
+      <div class="feature-split">
+        <div>
+          <p class="section-copy">
+            I built a full ordering flow so businesses can buy directly from the site instead of only requesting quotes.
+          </p>
+          <ul class="feature-list">
+            <li><span>Cart</span>Products are ordered by the case, and custom designs carry their logo file and mockup into the cart.</li>
+            <li><span>Delivery</span>Free pickup, free delivery in LA County, or shipping anywhere in the U.S. with live UPS, FedEx, and USPS rates.</li>
+            <li><span>Payment</span>Secure Stripe checkout that accepts cards, Apple Pay, and Amazon Pay.</li>
+            <li><span>Backend</span>Netlify serverless functions handle pricing, shipping, and sending order and artwork details to the team.</li>
+            <li><span>Proofing</span>Custom orders get a digital proof before production, and larger buyers can request net terms or an invoice.</li>
+          </ul>
+        </div>
+        <div class="gallery-item feature-shot" data-lightbox="images/web/ppc_cart.jpg">
+          <img src="images/web/ppc_cart.jpg" alt="Pacific Paper Cups cart with a custom printed order">
+        </div>
+      </div>
+    </section>
+
+    <!-- HOMEPAGE -->
+    <section class="project-section">
+      <h2 class="section-title">HOMEPAGE</h2>
+      <div class="site-frame">
+        <div class="webdev-bar"><i></i><i></i><i></i><span>pacificpapercups.com</span></div>
+        <div class="site-frame-scroll">
+          <img src="images/web/ppc_screenshot_full.jpg" alt="Pacific Paper Cups full homepage">
+        </div>
+      </div>
+      <p class="site-frame-hint">Scroll inside the window to see the full page.</p>
+      <div class="site-actions" style="margin-top:16px;">
+        <a class="spotlight-btn" href="https://pacificpapercups.com" target="_blank" rel="noopener">Visit Live Site</a>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="project-section">
+      <h2 class="section-title">IMAGERY</h2>
+      <div class="gallery gallery--uniform">
+        <div class="gallery-item" data-lightbox="images/web/ppc_boxes-group.jpg">
+          <img src="images/web/ppc_boxes-group.jpg" alt="Kraft takeout boxes">
+        </div>
+
+        <div class="gallery-item" data-lightbox="images/web/ppc_large-open.jpg">
+          <img src="images/web/ppc_large-open.jpg" alt="Flat top container open">
+        </div>
+
+        <div class="gallery-item" data-lightbox="images/web/ppc_large-closed.jpg">
+          <img src="images/web/ppc_large-closed.jpg" alt="Flat top container closed">
+        </div>
+
+        <div class="gallery-item" data-lightbox="images/web/ppc_clamshell-open.jpg">
+          <img src="images/web/ppc_clamshell-open.jpg" alt="Kraft shell container">
+        </div>
+
+        <div class="gallery-item" data-lightbox="images/web/ppc_cup-white.jpg">
+          <img src="images/web/ppc_cup-white.jpg" alt="Paper cup">
+        </div>
+
+        <div class="gallery-item" data-lightbox="images/web/ppc_kraft-bag-white.jpg">
+          <img src="images/web/ppc_kraft-bag-white.jpg" alt="Kraft paper bag">
+        </div>
+      </div>
+    </section>
+
+    <a class="back-link" href="project-web-development.html">← Back to Web Development</a>
+
+  </div>
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-backdrop"></div>
+  <img class="lightbox-image" id="lightbox-image" alt="">
+</div>
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightbox-image");
+
+  document.querySelectorAll("[data-lightbox]").forEach(item => {
+    item.addEventListener("click", () => {
+      lightboxImage.src = item.dataset.lightbox;
+      lightbox.classList.add("is-active");
+    });
+  });
+
+  lightbox.addEventListener("click", () => {
+    lightbox.classList.remove("is-active");
+    lightboxImage.src = "";
+  });
+</script>
+
+</body>
+</html>
